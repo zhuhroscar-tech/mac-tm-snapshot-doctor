@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mac-tm-snapshot-doctor"
+description = "CLI utility to diagnose Time Machine local snapshots on macOS."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+version = "0.1.0"
+authors = [{name = "zhuhroscar-tech"}]
+keywords = ["macos", "time-machine", "snapshot", "tmutil", "cli"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+mac-tm-snapshot-doctor = "mac_tm_snapshot_doctor.cli:main"
