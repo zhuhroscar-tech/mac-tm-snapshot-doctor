@@ -12,13 +12,17 @@ snapshots and tells you what state Time Machine is in, in plain language, so
 you know what's safe to clean up. It never deletes anything on its own — it
 only reports and suggests commands for you to run yourself.
 
+![mac-tm-snapshot-doctor example output](docs/images/example-output.png)
+
 ```text
 $ mac-tm-snapshot-doctor
-Volume: / (Macintosh HD)
-Local snapshots: 3 found, oldest 2026-08-02, newest 2026-09-10
-Time Machine status: idle, no backup running
-Suggestion: snapshots older than 24h can usually be thinned safely; see
-`tmutil thinlocalsnapshots` for the manual command.
+Volume: /
+Snapshot paths visible: (none)
+Snapshots: 0
+Backup running: False
+
+Recommendations:
+ - No local snapshots were detected for this volume at command time.
 ```
 
 ## Why this tool exists
